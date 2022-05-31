@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Modals } from "./components/Modals/Modals";
+import { Table } from "./components/Table/Table";
+import { useAppDispatch, useAppSelector } from "./reducer/hooks";
+import { changeModal } from "./reducer/modalSlice";
 
 function App() {
+  const {modalStatus } = useAppSelector((state) => state);
+  const dispatch = useAppDispatch();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <React.Fragment>
+      <Modals></Modals>
+      <div
+        className="container"
+        style={{
+          zIndex: modalStatus.status === "none" ? "10" : "-1",
+        }}
+      >
+        <button
+          className="container__btn"
+          onClick={() => dispatch(changeModal("invoice"))}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Add
+        </button>
+        <Table></Table>
+      </div>
+    </React.Fragment>
   );
 }
 

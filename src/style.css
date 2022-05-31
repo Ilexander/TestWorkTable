@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  position: relative;
+  font-family: 'Roboto',
+    sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol,
+button {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+text {
+  color: white !important;
+}
+
+button {
+  background-color: transparent;
+  outline-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+svg path {
+  transition: stroke-dasharray 0.6s !important;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+    max-width: 1750px;
+  height: 100vh;
+}
+
+.container__btn {
+  margin: 25px 0;
+  background: #83BA63;
+  border-radius: 12px;
+  padding: 5px 14px;
+  color: #FFFFFF;
+}
+
+.modal__wrapper {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}

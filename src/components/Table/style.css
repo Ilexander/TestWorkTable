@@ -1,0 +1,46 @@
+table {
+  border-spacing: 0px;
+  margin: 0 auto;
+  white-space: nowrap;
+  max-width: 1750px;
+  width: 100%;
+  overflow-x: scroll;
+  border-collapse: collapse;
+}
+
+table tr {
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+  background: #376B8D;
+  border: 0.25px solid #6B7074;
+}
+
+table tr th {
+  position: relative;
+  padding: 3px 6px;
+  width: 136px;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+table tr th::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: #6B7074;
+}
+
+.user__table {
+  color: black;
+  background-color: white;
+}
+
+.user__table th {
+  color: black;
+}
